@@ -1,27 +1,30 @@
 deployments:
-- definitions:
-  - args:
-    - annotations: []
-      description: The first number
-      key: a
-      kind: INT
-      nullable: false
-    - annotations: []
-      description: The second number
-      key: b
-      kind: INT
-      nullable: false
-    description: This function adds two numbers and returns the result.
-    interface: test_func
-    interfaces: []
-    kind: FUNCTION
-    name: Add two numbers
-    returns:
-    - key: return0
-      kind: INT
-      nullable: false
-  deployed:
-    docker: jhnnsrs/testo:0.0.4
-  deployer: arkitekt.deployers.port.dockerbuild
-  identifier: testo
-  version: 0.0.4
+  - definitions:
+      - args:
+          - annotations: []
+            description: The first number
+            key: a
+            kind: INT
+            nullable: false
+          - annotations: []
+            description: The second number
+            key: b
+            kind: INT
+            nullable: false
+        description: This function adds two numbers and returns the result.
+        interface: test_func
+        interfaces: []
+        kind: FUNCTION
+        name: Add two numbers
+        returns:
+          - key: return0
+            kind: INT
+            nullable: false
+    deployed:
+      docker: jhnnsrs/testo:latest
+    deployer: arkitekt.deployers.port.dockerbuild
+    identifier: testo
+    scopes:
+      - read
+    version: latest
+latest_deployment: "2023-01-25T16:23:14.595708"
