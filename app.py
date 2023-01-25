@@ -2,8 +2,10 @@
 from arkitekt import register
 
 @register()
-def test_func(a: int, b: int) -> int:
-    """Add two numbers
+def test_func(a: int, b: int, c: int) -> int:
+    """Add three numbers
+
+
 
     This function adds two numbers and returns the result.
 
@@ -14,5 +16,5 @@ def test_func(a: int, b: int) -> int:
     Returns:
         int: The returned number
     """
-    return a + b
+    return a + b + c
 
